@@ -9,10 +9,12 @@ This was written in a few hours to play with some new node modules.
 Install
 -------
 Clone the repo
+
 npm install (to get the dependencies)
 
 Run
 ---
 Fire it up by running node app.js
+
 Proceed to http://yourhost:3000/ or http://yourhost:3000/r/nameOfSubreddit for a given subreddit.
 
