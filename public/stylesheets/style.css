@@ -1,0 +1,54 @@
+/* elements */
+
+body {
+  background: #e8e7e3;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+/* classes */
+
+.post {
+    display: block;
+    float: left;
+    min-width: 300px;
+ 	max-width: 400px;
+    max-height: 600px;
+    background-color: #E6E6E6;
+    padding-bottom: 5px;
+}
+.post .photo  {
+    display: block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+}
+
+.post .text
+{
+    vertical-align:top;
+    margin-bottom: 5px;
+    max-width: 400px;
+    max-height: 100px;
+	width: 400px;
+}
+
+.post .photo img {
+    background: #fff;
+    border-style: none;
+    vertical-align:top;
+    margin-bottom: 5px;
+	width: 100%;
+}
+
+/* IDs */
+
+#wrapper
+{
+	margin-left: 10%;
+	margin-right: 10%;
+}
