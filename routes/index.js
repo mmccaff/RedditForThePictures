@@ -7,8 +7,18 @@ var mongoose = require('mongoose');
 
 var nodeio = require('node.io'), options = {timeout: 10, jsdom: true, max: 20, auto_retry: true};
 
-var mongoose = require('mongoose')
-  , db = mongoose.createConnection('localhost', 'reddit');
+// move these to a config file
+if (process.env.NODE_ENV && process.env.MONGOLAB_URI)
+{
+	var mongoose = require('mongoose')
+	  , db = mongoose.createConnection(process.env.MONGOLAB_URI);
+}
+else
+{
+	var mongoose = require('mongoose')
+	  , db = mongoose.createConnection('localhost', 'reddit');
+}
+
 
 db.on('error', console.error.bind(console, 'connection error:'));
 
