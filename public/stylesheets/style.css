@@ -14,9 +14,7 @@ a {
 .post {
     display: block;
     float: left;
-    min-width: 300px;
  	max-width: 400px;
-    max-height: 600px;
     background-color: #E6E6E6;
     padding-bottom: 5px;
 }
@@ -49,6 +47,7 @@ a {
 
 #wrapper
 {
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 2%;
+	margin-right: 2%;
+	width: 100%;
 }

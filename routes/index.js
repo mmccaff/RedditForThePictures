@@ -158,7 +158,15 @@ exports.index = function(req, res){
 		
 	  if (data.length > 0)
 	  {
-	  	res.render('index', { title: 'RedditForThePictures', links: data });
+		if (req.query.method == 'json')
+		{
+			res.json(data);
+		}
+		else
+		{
+			res.render('index', { title: 'RedditForThePictures', links: data });
+		}
+	  	
 	  }
 	  else
 	  {
@@ -167,7 +175,15 @@ exports.index = function(req, res){
 		
 		nodeio.start(getJob(seed, 3, myOptions), options, function(err, inputLinks) {
 			console.log('Got data from scraping...');
-			res.render('index', { title: 'RedditForThePictures', links: inputLinks });
+			
+			if (req.query.method == 'json')
+			{
+				res.json(inputLinks);
+			}
+			else
+			{
+				res.render('index', { title: 'RedditForThePictures', links: inputLinks });
+			}
 		}, true);
 	  }
 	});
