@@ -158,7 +158,7 @@ exports.index = function(req, res){
 		
 	  if (data.length > 0)
 	  {
-		if (req.query.method == 'json')
+		if (req.query.output == 'json')
 		{
 			res.json(data);
 		}
@@ -176,7 +176,7 @@ exports.index = function(req, res){
 		nodeio.start(getJob(seed, 3, myOptions), options, function(err, inputLinks) {
 			console.log('Got data from scraping...');
 			
-			if (req.query.method == 'json')
+			if (req.query.output == 'json')
 			{
 				res.json(inputLinks);
 			}
