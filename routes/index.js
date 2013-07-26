@@ -158,7 +158,11 @@ exports.index = function(req, res){
 		
 	  if (data.length > 0)
 	  {
-		if (req.query.output == 'json')
+	   	if (typeof req.query.callback != 'undefined' && req.query.output == 'json') 
+		{
+			res.jsonp(data);
+		}
+		else if (req.query.output == 'json')
 		{
 			res.json(data);
 		}
@@ -176,7 +180,11 @@ exports.index = function(req, res){
 		nodeio.start(getJob(seed, 3, myOptions), options, function(err, inputLinks) {
 			console.log('Got data from scraping...');
 			
-			if (req.query.output == 'json')
+			if (typeof req.query.callback != 'undefined' && req.query.output == 'json') 
+			{
+				res.jsonp(inputLinks);
+			}
+			else if (req.query.output == 'json')
 			{
 				res.json(inputLinks);
 			}
