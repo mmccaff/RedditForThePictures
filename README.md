@@ -17,4 +17,9 @@ Run
 Fire it up by running node app.js
 
 Proceed to http://yourhost:3000/ or http://yourhost:3000/r/nameOfSubreddit for a given subreddit.
+Add ?output=json to instead return json output. Supports jsonp as well.
+
+Demo
+----
+http://pure-hamlet-9600.herokuapp.com
 
